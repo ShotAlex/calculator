@@ -1,65 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="style.css" rel="stylesheet">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
 
 </head>
+
 <body>
- <div id="calculator">
-  <div id="displayM"></div>
-  <div id="screen">
-    <div id="outputScr"></div>
-    <div id="inputScr">0</div>
-  </div>
-  <div id="brand"><a href="https://beekey.github.io/" target="_blank"> CALCULATOR</a></div>
+  <table class="table">
+    <tr>
+      <td id="sciout">
+        <div>
+          <div id="sciOutPut">0</div>
+        </div>
+        <div style="padding-top:3px;width:100%">
+          <div>
+            <span onclick="r('sin')" class="scifunc">sin</span>
+            <span onclick="r('cos')" class="scifunc">cos</span>
+            <span onclick="r('tan')" class="scifunc">tan</span>
+            <span class="scird">
+              <label for="scirdsettingd">
+                <input id="scirdsettingd" type="radio" name="scirdsetting" value="deg" onClick="degreeRadians='degree';" checked>Deg</label>
+              <label for="scirdsettingr">
+                <input id="scirdsettingr" type="radio" name="scirdsetting" value="rad" onClick="degreeRadians='radians';">Rad</label>
+            </span>
+          </div>
+          <div>
+            <span onclick="r('asin')" class="scifunc">sin<sup>-1</sup>
+            </span>
+            <span onclick="r('acos')" class="scifunc">cos<sup>-1</sup>
+            </span>
+            <span onclick="r('atan')" class="scifunc">tan<sup>-1</sup>
+            </span>
+            <span onclick="r('pi')" class="scifunc">&#960;</span>
+            <span onclick="r('e')" class="scifunc">e</span>
+          </div>
+          <div>
+            <span onclick="r('pow')" class="scifunc">x<sup>y</sup>
+            </span>
+            <span onclick="r('x3')" class="scifunc">x<sup>3</sup>
+            </span>
+            <span onclick="r('x2')" class="scifunc">x<sup>2</sup>
+            </span>
+            <span onclick="r('ex')" class="scifunc">e<sup>x</sup>
+            </span>
+            <span onclick="r('10x')" class="scifunc">10<sup>x</sup>
+            </span>
+          </div>
+          <div>
+            <span onclick="r('apow')" class="scifunc">
+              <sup>y</sup>&#8730;x</span>
+            <span onclick="r('3x')" class="scifunc">
+              <sup>3</sup>&#8730;x</span>
+            <span onclick="r('sqrt')" class="scifunc">&#8730;x</span>
+            <span onclick="r('ln')" class="scifunc">ln</span>
+            <span onclick="r('log')" class="scifunc">log</span>
+          </div>
+          <div>
+            <span onclick="r('(')" class="scifunc">(</span>
+            <span onclick="r(')')" class="scifunc">)</span>
+            <span onclick="r('1/x')" class="scifunc">1/x</span>
+            <span onclick="r('pc')" class="scifunc">%</span>
+            <span onclick="r('n!')" class="scifunc">n!</span>
+          </div>
+        </div>
+        <div style="padding-top:3px;">
+          <div>
+            <span onclick="r(7)" class="scinm">7</span>
+            <span onclick="r(8)" class="scinm">8</span>
+            <span onclick="r(9)" class="scinm">9</span>
+            <span onclick="r('+')" class="sciop">+</span>
+            <span onclick="r('MS')" class="sciop">MS</span>
+          </div>
+          <div>
+            <span onclick="r(4)" class="scinm">4</span>
+            <span onclick="r(5)" class="scinm">5</span>
+            <span onclick="r(6)" class="scinm">6</span>
+            <span onclick="r('-')" class="sciop">&ndash;</span>
+            <span onclick="r('M+')" class="sciop">M+</span>
+          </div>
+          <div>
+            <span onclick="r(1)" class="scinm">1</span>
+            <span onclick="r(2)" class="scinm">2</span>
+            <span onclick="r(3)" class="scinm">3</span>
+            <span onclick="r('*')" class="sciop">&#215;</span>
+            <span onclick="r('M-')" class="sciop">M-</span>
+          </div>
+          <div>
+            <span onclick="r(0)" class="scinm">0</span>
+            <span onclick="r('.')" class="scinm">.</span>
+            <span onclick="r('EXP')" class="sciop">EXP</span>
+            <span onclick="r('/')" class="sciop">&#247;</span>
+            <span onclick="r('MR')" class="sciop">MR</span>
+          </div>
+          <div>
+            <span onclick="r('+/-')" class="sciop">&#177;</span>
+            <span onclick="r('RND')" class="sciop">RND</span>
+            <span onclick="r('C')" class="scieq">C</span>
+            <span onclick="r('=')" class="scieq">=</span>
+            <span onclick="r('MC')" class="sciop">MC</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td id="calfootnote">go to 
+        <a href="https://github.com/ShotAlex" rel="nofollow">ShotAlex</a>
+      </td>
+    </tr>
+  </table>
 
-  <div id="buttons">
-    <div id="mc">MC</div>
-    <div id="mr">MR</div>
-    <div id="ms">MS</div>
-    <div id="mp">M+</div>
-    <div id="mm">M-</div>
-    <div id="backspace"><b>&#8592;</b></div>
-    <div id="ce">CE</div>
-    <div id="c">C</div>
-    <div id="plusminus">&#177;</div>
-    <div id="sqroot"><b>&#8730;</b></div>
-    <div id="seven">7</div>
-    <div id="eight">8</div>
-    <div id="nine">9</div>
-    <div id="divide"><b>/</b></div>
-    <div id="percent">%</div>
-    <div id="four">4</div>
-    <div id="five">5</div>
-    <div id="six">6</div>
-    <div id="times">*</div>
-    <div id="reciprocal">1/x</div>
-    <div id="one">1</div>
-    <div id="two">2</div>
-    <div id="three">3</div>
-    <div id="minus">-</div>
-    <div id="equals">=</div>
-    <div id="zero">0</div>
-    <div id="decpoint">.</div>
-    <div id="plus">+</div>
-  </div>
-</div>
-
-<div id="notes">
-  <ul>
-    <li>Use keyboard or calculator buttons!</li>
-    <li>Letter c works as calculator button C; Delete as CE; n as &#177;; s as &#8730;; r as 1/x.</li>
-    <li>Input numbers are limited to ten digits before decimal point and five digits after.</li>
-    <li>To calculate x percent of y simply enter x%y.</li>
-    <li>If new value is not entered, the value currently displayed in the input (lower) part of the calculator screen is used in it's place.</li>
-  </ul>
-</div>
-
-  
+  <script src='script.js'></script>
 </body>
+
 </html>
