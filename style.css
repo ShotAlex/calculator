@@ -1,229 +1,156 @@
-body {
-  background-color: #A8C99A;
-  /*---------------------------
-  make text selection impossible
-  --------------------------------*/
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+.table {
+   width: 280px;
+   margin: 0 auto;
+   margin-top: 100px;
+ }
+ 
+ #sciout {
+   padding: 5px;
+   border-top: 1px solid #262626;
+   border-left: 1px solid #262626;
+   border-right: 2px outset #262626;
+   border-bottom: 2px outset #262626;
+   background: #eeeeee;
+   font-family: arial, helvetica, sans-serif;
+ }
 
-#brand a {
-  padding: 5px 0 0 0;
-  color: #aaa;
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-decoration: none;
-  outline: 0;
-}
+ #sciOutPut {
+   font-size: 18px;
+   padding: 3px;
+   margin: 2px;
+   cursor: text;
+   text-align: right;
+   background-color: #B8C6A3;
+   border: 1px solid #87996b;
+   border-radius: 3px;
+   color: #000;
+ }
 
-#brand a:hover {
-  color: #BFCCD2;
-}
+ .scifunc {
+   display: inline-block;
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+   width: 50px;
+   height: 25px;
+   margin: 1px;
+   border: 1px solid #262626;
+   border-radius: 3px;
+   font-family: arial, helvetica, sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   color: #185290;
+   background-color: #C8D8E8;
+ }
 
-#calculator {
-  position: relative;
-  text-align: center;
-  background-color: #555;
-  width: 300px;
-  height: 440px;
-  margin: 27px auto;
-  padding: 10px;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 6px 3px #444, 0 2px 2px #ccc inset;
-  -moz-box-shadow: 0 6px 3px #444, 0 2px 2px #ccc inset;
-  box-shadow: 0 6px 3px #444, 0 2px 2px #ccc inset;
-  cursor: default;
-}
+ .scifunc:active {
+   background-color: #013f7d;
+   color: #ffffff;
+ }
 
-#displayM {
-  position: absolute;
-  width: 27px;
-  height: 12px;
-  left: 23px;
-  top: 45px;
-  line-height: 1;
-  color: #88A0AC;
-  text-align: left;
-  padding-left: 3px;
-}
+  .scifunc:hover {
+    background-color: #aec8e2;
+  }
 
-#screen {
-  width: auto;
-  height: 70px;
-  margin: 9px 10px 8px 10px;
-  background-color: #ECF5FF;
-  -webkit-box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2) inset, 0 -4px 2px rgba(0, 0, 0, 0.2) inset, 0 4px 2px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2) inset, 0 -4px 2px rgba(0, 0, 0, 0.2) inset, 0 4px 2px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2) inset, 0 -4px 2px rgba(0, 0, 0, 0.2) inset, 0 4px 2px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#D7EAFF), to(#FFFFFF));
-  background-image: -webkit-linear-gradient(top, #D7EAFF, #ECF5FF, white);
-  background-image: -moz-linear-gradient(top, #D7EAFF, #ECF5FF, white);
-  background-image: -ms-linear-gradient(top, #D7EAFF, #ECF5FF, white);
-  background-image: -o-linear-gradient(top, #D7EAFF, #ECF5FF, white);
-  background-image: linear-gradient(180deg, #D7EAFF, #ECF5FF, white);
-  padding: 7px 3px 5px 3px;
-}
+ .scinm {
+   display: inline-block;
+   display: table-cell;
+   vertical-align: middle;
+   padding: 5px 0px;
+   text-align: center;
+   width: 50px;
+   height: 30px;
+   margin: 1px;
+   border: 1px solid #262626;
+   border-radius: 3px;
+   font-family: arial, helvetica, sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   color: #FFF;
+   background-color: #707070;
+ }
 
-#outputScr {
-  font-size: 14px;
-  overflow: hidden;
-  height: 21px;
-  width: 250px;
-  background-color: transparent;
-  color: #777;
-  border: 0;
-  margin: 3px auto;
-  outline: 0;
-  text-align: right;
-  cursor: default;
-}
+ .scinm:hover {
+  background-color: rgb(129, 129, 129);
+ }
 
-#inputScr {
-  width: 250px;
-  background-color: transparent;
-  color: #777;
-  border: 0;
-  margin: 3px auto;
-  outline: 0;
-  text-align: right;
-  cursor: default;
-  font-size: 21px;
-  line-height: 1;
-  padding-top: 3px;
-  overflow: hidden;
-  height: 27px;
-}
+ .scinm:active {
+   background-color: #aaaaaa;
+   color: #000000;
+ }
 
-#buttons {
-  padding-top: 2px;
-}
+ .sciop {
+   display: inline-block;
+   display: table-cell;
+   vertical-align: middle;
+   padding: 5px 0px;
+   text-align: center;
+   width: 50px;
+   height: 30px;
+   margin: 1px;
+   border: 1px solid #262626;
+   border-radius: 3px;
+   font-family: arial, helvetica, sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   color: #262626;
+   background-color: #ccc;
+ }
 
-#zero,
-#decpoint,
-#plus,
-#one,
-#two,
-#three,
-#minus,
-#equals,
-#four,
-#five,
-#six,
-#times,
-#reciprocal,
-#seven,
-#eight,
-#nine,
-#divide,
-#percent,
-#backspace,
-#ce,
-#c,
-#plusminus,
-#sqroot,
-#mc,
-#mr,
-#ms,
-#mp,
-#mm {
-  color: #333;
-  font-size: 17px;
-  padding: 5px 3px 3px 3px;
-  -webkit-text-shadow: 0 -1px white, 0 1px #bbb;
-  -moz-text-shadow: 0 -1px white, 0 1px #bbb;
-  text-shadow: 0 -1px white, 0 1px #bbb;
-  display: inline-block;
-  width: 45px;
-  height: 34px;
-  margin: 5px 2px;
-  background-color: #EBEBEB;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#D8D8D8));
-  background-image: -webkit-linear-gradient(top, #FFFFFF, #D8D8D8);
-  background-image: -moz-linear-gradient(top, #FFFFFF, #D8D8D8);
-  background-image: -ms-linear-gradient(top, #FFFFFF, #D8D8D8);
-  background-image: -o-linear-gradient(top, #FFFFFF, #D8D8D8);
-  background-image: linear-gradient(180deg, white, #D8D8D8);
-  border-radius: 7px;
-  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.2), 0 -2px 3px rgba(0, 0, 0, 0.3) inset, 0 -2px 0 white inset;
-  -moz-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.2), 0 -2px 3px rgba(0, 0, 0, 0.3) inset, 0 -2px 0 white inset;
-  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 -2px 3px rgba(0, 0, 0, 0.4) inset, 0 -2px 0 white inset;
-  vertical-align: middle;
-}
+ .sciop:active {
+   background-color: #000000;
+   color: #ffffff;
+ }
+ .sciop:hover {
+   background-color: #dddddd;
+ }
 
-#minus,
-#plus {
-  margin-right: -4px;
-}
+ .scird {
+   display: inline-block;
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+   height: 30px;
+   margin: 1px;
+   border: 1px solid #eeeeee;
+   border-radius: 3px;
+   font-family: arial, helvetica, sans-serif;
+   font-size: 13px;
+   color: #262626;
+ }
 
-#zero {
-  width: 98px;
-}
+ .scieq {
+   display: inline-block;
+   display: table-cell;
+   vertical-align: middle;
+   padding: 5px 0px;
+   text-align: center;
+   width: 50px;
+   height: 30px;
+   margin: 1px;
+   border: 1px solid #262626;
+   border-radius: 3px;
+   font-family: arial, helvetica, sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   color: #F00;
+   background-color: #DCADB0;
+ }
 
-#equals {
-  height: 78px;
-  margin-right: 11px;
-  float: right;
-}
+ .scieq:active {
+   background-color: #ff0000;
+   color: #ffffff;
+ }
+ .scieq:hover {
+   background-color: #dd6f6f;
+ }
 
-#backspace {
-  font-size: 160%;
-  line-height: 0.8;
-}
+ #calfootnote {
+   font-family: arial, helvetica, sans-serif;
+   font-size: 12px;
+   text-align: right;
+ }
 
-#plusminus {
-  line-height: 1.3;
-}
-
-#times {
-  font-size: 150%;
-  line-height: 1.5;
-}
-
-#minus {
-  font-size: 123%;
-  line-height: 1.2;
-}
-
-#plus {
-  font-size: 123%;
-  line-height: 1.4;
-}
-
-#decpoint {
-  font-size: 160%;
-  line-height: 1;
-}
-
-#equals {
-  font-size: 170%;
-  padding-top: 20px;
-}
-
-#buttons div:hover {
-  background-color: #EBEBEB;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#F7F9F9), to(#BFCCD2));
-  background-image: -webkit-linear-gradient(top, #F7F9F9, #BFCCD2);
-  background-image: -moz-linear-gradient(top, #F7F9F9, #BFCCD2);
-  background-image: -ms-linear-gradient(top, #F7F9F9, #BFCCD2);
-  background-image: -o-linear-gradient(top, #F7F9F9, #BFCCD2);
-  background-image: linear-gradient(180deg, #F7F9F9, #BFCCD2);
-}
-
-#notes {
-  width: 300px;
-  margin: auto;
-  background-color: #CDE0C5;
-  border: 2px solid #aaa;
-  border-radius: 10px;
-  padding: 5px;
-}
-
-ul {
-  padding-left: 21px;
-  margin-bottom: 0;
-}
+ span {
+   cursor: pointer;
+ }
